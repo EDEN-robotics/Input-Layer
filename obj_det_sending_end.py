@@ -22,7 +22,7 @@ connected_clients = set()
 # Load YOLO model (use GPU if available)
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"[server] Loading YOLO model on {device.upper()}...")
-model = YOLO("Eden/Input-Layer/YOLOv11obj_model.pt").to(device)
+model = YOLO("/home/eden/Eden/Input-Layer/YOLOv11obj_model.pt").to(device)
 print("[server] Model ready.")
 
 # Keep a small buffer of previous grayscale frames for motion detection
